@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-border-radius: 8px;
+    border-radius: 8px;
 
 
 
@@ -28,7 +28,7 @@ border-radius: 8px;
 .header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 
 }
@@ -50,8 +50,8 @@ border-radius: 8px;
     font-size: 26px;
 }
 
-.header__title--orange {
-    color: var(--color-secondary);
+.header__title--blue {
+    color: #137fec;
 }
 
 .header__img {
@@ -66,7 +66,6 @@ border-radius: 8px;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--color-text);
     margin-right: 1rem;
     justify-content: flex-end;
     display: none;
@@ -89,7 +88,6 @@ border-radius: 8px;
 
 .nav__link {
     display: flex;
-    color: var(--color-text);
     text-decoration: none;
     font-size: 0.9rem;
     text-align: center;
@@ -101,7 +99,7 @@ border-radius: 8px;
 
 
 .button {
-        text-decoration: none;
+    text-decoration: none;
     font-weight: bold;
     font-size: 0.75rem;
     width: 130px;
@@ -113,7 +111,7 @@ border-radius: 8px;
     border: 2px solid blue;
     letter-spacing: 0.03rem;
     transition: letter-spacing 0.3s;
-   
+
 
 }
 
@@ -126,57 +124,160 @@ border-radius: 8px;
 
 
 .hero {
-  height: 500px;
-  background-image: url("../assets/images/photo-1622533087594-627c3aa0d68a.jpg");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
+    height: 500px;
+    background-image: url("../assets/images/photo-1622533087594-627c3aa0d68a.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
 }
 
 
 
 .hero-content {
-  position: relative;
-  color: white;
-  max-width: 600px;
+    position: relative;
+    color: white;
+    max-width: 600px;
 }
 
 .badge {
-  background: orange;
-  padding: 6px 12px;
-  font-size: 14px;
-  margin-bottom: 16px;
+    background: orange;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-bottom: 16px;
 }
 
 .hero h2 {
-  font-size: 48px;
-  margin-bottom: 16px;
+    font-size: 48px;
+    margin-bottom: 16px;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 12px;
+    display: flex;
+    gap: 12px;
 }
 
 .btn-primary {
-  background-color: #137fec;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
+    background-color: #137fec;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 .btn-outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
 }
 
 
 
+.stats__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 60px 0;
+    color: #137fec;
+    padding: 80px 30px;
+}
+
+.stats__container h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid rgba(30, 41, 59, 0.07);
+    border: 2px solid rgb(192, 191, 191);
+
+}
+
+
+.about {
+    background: #f1f5f9;
+    padding: 80px 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.about-image {
+    background-image: url("../assets/images/depositphotos_63006497-stock-photo-group-of-builders-with-tablet.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    width: 50%;
+    height: 420px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.btn-link {
+    background: none;
+    color: #137fec;
+    font-weight: bold;
+    border: none;
+}
+
+
+.cta {
+  background: #137fec;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.btn-white {
+  background: white;
+  color: #137fec;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+
+.container__footer {
+  background: white;
+  padding: 60px 0 20px;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1.5px solid #d1d5db;
+}
 
 
 
+.footer a {
+  display: flex;
+  text-decoration: none;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.footer a:hover {
+  color: #137fec;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+  color: #94a3b8;
+}
