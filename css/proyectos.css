@@ -1,0 +1,183 @@
+.main__proyects{
+    max-width: 1400px;
+    min-width: 550px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "project"
+        "filter"
+        "projects";
+    
+}
+
+.project {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  grid-area: project;
+}
+
+.project__image {
+  height: 340px;
+  border-radius: 12px;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBciKCYGXzu2zLachjng8-DTGDb0VAdf7cKSU1rVlZtBs-Pdv3pfycdOdckZvegiYMRQrHwS5SC9iRs0J9c8btr67kWALEAk7Rp1eZValaN15VcPTOb3EUeQFvZ4Sj0hVkP7UWQ-vGcousdwDE0RPyA9PzRyfSd_JEamFMZmn0SzlC_hkf2khZPVEod2s4bDByBANnYX9xZb6SoopomtrH7ugXfr9H4yQXt5lzW3mV1kGjxR6O3VMAy2aBvuqbH5M6jeUhhRBTWSrY_");
+  background-size: cover;
+  background-position: center;
+}
+
+.project__tag {
+  color: #137fec;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project__title {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.project__description {
+  color: #617589;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.filter {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+  grid-area: filter;
+}
+
+.filter__title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.filter__group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter__button {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.filter__button--active {
+  background-color: #137fec;
+  color: #fff;
+  border: none;
+}
+
+
+.projects {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.card__image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.card__image--villa {
+  background-image: url("../assets/images/466378675.jpg");
+}
+
+.card__image--office {
+  background-image: url("../assets/images/2.jpg");
+}
+
+.card__image--glass {
+  background-image: url("../assets/images/3.jpg");
+}
+
+.card__image--industrial {
+  background-image: url("../assets/images/4.jpg");
+}
+
+.card__image--historic {
+  background-image: url("../assets/images/5.jpeg");
+}
+
+.card__image--skyline {
+  background-image: url("../assets/images/6jpg.jpg");
+}
+
+.card__body {
+  padding: 18px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__badge {
+  font-size: 10px;
+  background-color: #e8f1fe;
+  color: #137fec;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.card__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #617589;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+
+.footer {
+  border-top: 1px solid #e2e8f0;
+  padding: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #617589;
+  border-top: 1px solid #617589;
+}
+
+
+@media (max-width: 768px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+}
