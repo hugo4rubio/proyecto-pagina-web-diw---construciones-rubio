@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+<body>
+       <header class="header">
+        <section class="header__container">
+            <article class="header__logo-container">
+                <a href="./index.html"><img
+                        src="../images/png-transparent-computer-icons-architecture-compass-icon-angle-compass-architect.png"
+                        alt="logo compas" class="header__img" /></a>
+
+                <h1 class="header__title">
+                    Construciones
+                    <span class="header__title--blue"> &nbsp;Rubio</span>
+                </h1>
+
+            </article>
+
+            <button class="nav__hamburguer" id="nav_hamburguer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav" id="nav">
+                <!-- nav nav--open -->
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--first">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--first">Presupuestos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Proyectos</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contacto</a>
+                </li>
+            </ul>
+            </nav>
+
+
+            <article class="buttons">
+                <a href="#" class="btn-primary"> Obtener cotización</a>
+            </article>
+
+        </section>
+    </header>
+    
+     <main class="main-content">
+     
+      <section class="intro__titlle">
+        <h1>Contactenos y solicite un presupuesto</h1>
+        <p>Colabore  con nosotros para construir su visión con precisión y fiabilidad. Estamos aquí para responder cualquier pregunta sobre su próximo gran proyecto.</p>
+      </section>
+
+      <section class="container__info">
+        
+        <section class="contact-info">
+          <h2>Visita Nuestras oficinas</h2>
+
+          <article class="contact-item">
+            <span class="material-symbols-outlined">location_on</span>
+            <article>
+              <p>Main Headquarters</p>
+              <p>Av. Real Fábrica de Sedas, s/n, 45600 Talavera de la Reina, Toledo</p>
+            </article>
+          </article>
+
+          <article class="contact-item">
+            <span class="material-symbols-outlined">call</span>
+            <article>
+              <p>Numero de telefono</p>
+              <p>+34 111 000 1234 </p>
+            </article>
+          </article>
+
+          <article class="contact-item">
+            <span class="material-symbols-outlined">mail</span>
+            <article>
+              <p>Consultas de proyectos</p>
+              <p>construcionesrubio@gmail.com</p>
+            </article>
+          </article>
+
+          <article class="map-container">
+            <article class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6116.727023611286!2d-4.839595522237543!3d39.95562468357205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd401c717cef78c9%3A0xe80e353d605fae33!2sI.E.S.%20Ribera%20del%20Tajo!5e0!3m2!1ses!2ses!4v1768005452576!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </article>
+
+
+        </section>
+
+        <section class="presupuestos-form">
+          <h2>Solicitar un Presupuesto</h2>
+          <p>Complete el formulario a continuación y nuestro equipo se comunicará con usted dentro de 24 horas.</p>
+
+          <form>
+            <section class="form-row">
+              <article class="form-field">
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Jorge ">
+              </article>
+              <article class="form-field">
+                <label> Dirección del correo</label>
+                <input type="email" placeholder="jorge@example.com">
+              </article>
+            </section>
+            <section class="form-row">
+              <article class="form-field">
+                <label>Tipo de proyecto</label>
+                <select>
+                  <option>Construción residencial</option>
+                  <option>Edificio Comercial</option>
+                  <option>Renovación de interiores</option>
+                  <option>Diseño arquitectonico</option>
+                  <option>Planificación Urbana</option>
+                </select>
+              </article>
+              <article class="form-field">
+                <label>presupuesto estimado</label>
+                <select>
+                  <option>50k - 100k</option>
+                  <option>100k - 500k</option>
+                  <option>500k - 1M</option>
+                  <option>1M - 5M</option>
+                  <option>5M+</option>
+                </select>
+              </article>
+            </section>
+
+            <article class="form-field">
+              <label>Detalles del proyecto</label>
+              <textarea placeholder="Cuentanos sobre los requisitos de su proyecto , ubicación , etc.." rows="5"></textarea>
+            </article>
+
+            <article class="form-field">
+              <label>Adjunto (Opcional)</label>
+              <input type="file">
+            </article>
+
+            <article class="form-field checkbox-field">
+              <input type="checkbox">
+              <p>Al enviar este formulario, usted acepta nuestra Política de privacidad y da su consentimiento para que nos comuniquemos con usted con respecto a su consulta.</p>
+            </article>
+
+            <button type="submit" class="btn-primary">Submit Request</button>
+          </form>
+        </section>
+      </section>
+    </main>
+</body>
+</html>

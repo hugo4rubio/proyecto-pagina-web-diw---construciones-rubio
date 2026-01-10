@@ -73,8 +73,8 @@ body {
 
 .nav {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    gap: 20px;
 
 
 }
@@ -82,8 +82,8 @@ body {
 
 .nav__item {
     list-style: none;
-    width: 90px;
     display: flex;
+
 }
 
 .nav__link {
@@ -116,10 +116,18 @@ body {
 }
 
 
-.container {
+.main {
     min-width: 550px;
     max-width: 100%;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "hero"
+        "stats"
+        "about"
+        "cta";
 }
 
 
@@ -131,6 +139,8 @@ body {
     display: flex;
     align-items: center;
     border-radius: 8px;
+    grid-area: hero;
+    justify-content: center;
 }
 
 
@@ -178,11 +188,12 @@ body {
 
 .stats__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 60px 0;
     color: #137fec;
     padding: 80px 30px;
+    grid-area: stats;
 }
 
 .stats__container h3 {
@@ -208,6 +219,7 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    grid-area: about;
 }
 
 
@@ -237,6 +249,7 @@ body {
   color: white;
   padding: 80px 0;
   text-align: center;
+    grid-area: cta;
 }
 
 .cta-buttons {
