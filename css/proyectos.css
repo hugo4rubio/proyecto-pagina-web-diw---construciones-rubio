@@ -1,15 +1,4 @@
-.main__proyects{
-    max-width: 1400px;
-    min-width: 550px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "project"
-        "filter"
-        "projects";
-    
-}
+
 
 .project {
   max-width: 1200px;
@@ -17,7 +6,7 @@
   padding: 60px 20px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr ;
   gap: 50px;
   align-items: center;
   grid-area: project;
@@ -26,7 +15,7 @@
 .project__image {
   height: 340px;
   border-radius: 12px;
-  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBciKCYGXzu2zLachjng8-DTGDb0VAdf7cKSU1rVlZtBs-Pdv3pfycdOdckZvegiYMRQrHwS5SC9iRs0J9c8btr67kWALEAk7Rp1eZValaN15VcPTOb3EUeQFvZ4Sj0hVkP7UWQ-vGcousdwDE0RPyA9PzRyfSd_JEamFMZmn0SzlC_hkf2khZPVEod2s4bDByBANnYX9xZb6SoopomtrH7ugXfr9H4yQXt5lzW3mV1kGjxR6O3VMAy2aBvuqbH5M6jeUhhRBTWSrY_");
+  background-image: url("../assets/images/unnamed.png");
   background-size: cover;
   background-position: center;
 }
@@ -110,7 +99,24 @@
   height: 200px;
   background-size: cover;
   background-position: center;
+  
+    animation-name: card__img;
+    animation-duration: 2s;      
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
+
+@keyframes card__img {
+    from {
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 
 
 .card__image--villa {
@@ -175,9 +181,30 @@
 }
 
 
-@media (max-width: 768px) {
+
+
+
+ span.material-symbols-outlined {
+  color: #137fec;
+    animation-name: icono;
+    animation-duration: 1s;      
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes icono {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+@media (min-width: 768px) {
   .project {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
 }

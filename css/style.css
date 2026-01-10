@@ -9,6 +9,7 @@ body {
     margin: 0 auto;
     padding: 0 auto;
     font-family: Open_Sans;
+    overflow-x: hidden;
 }
 
 
@@ -20,9 +21,6 @@ body {
     justify-content: center;
     margin: 0 auto;
     border-radius: 8px;
-
-
-
 }
 
 .header__container {
@@ -30,7 +28,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-
 }
 
 
@@ -38,9 +35,39 @@ body {
     align-items: center;
     gap: 0.75rem;
     display: flex;
-
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
+@keyframes logo {
+    from {
+        transform: translatex(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+
+
+.header__img {
+    animation-name: logo-img;
+    animation-duration: 1s;      
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes logo-img {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
 
 .header__title {
     color: var(--color-text);
@@ -48,6 +75,12 @@ body {
     text-decoration: none;
     display: flex;
     font-size: 26px;
+    transform: transform 0.3s;
+}
+
+.header__title:hover {
+    transform: scale(1.05);
+    letter-spacing: 2px;
 }
 
 .header__title--blue {
@@ -75,10 +108,22 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
-
-
+    animation-name: nav;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
 }
 
+@keyframes nav {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .nav__item {
     list-style: none;
@@ -92,31 +137,23 @@ body {
     font-size: 0.9rem;
     text-align: center;
     border-bottom: 2px solid transparent;
+    transition: transform 0.3s;;
+}
+
+
+.nav__link:hover {
+    transform: scale(1.05);
+    letter-spacing: 2px;
 }
 
 
 
 
-
-.button {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.75rem;
-    width: 130px;
-    text-align: center;
-    border-radius: 0.25rem;
-    letter-spacing: 0.03rem;
-    background-color: blue;
-    color: white;
-    border: 2px solid blue;
-    letter-spacing: 0.03rem;
-    transition: letter-spacing 0.3s;
-}
 
 
 .main {
     min-width: 550px;
-    max-width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -154,7 +191,20 @@ body {
     padding: 6px 12px;
     font-size: 14px;
     margin-bottom: 16px;
+     animation: badge 2s ease forwards;
 }
+
+@keyframes badge {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .hero h2 {
     font-size: 48px;
@@ -172,7 +222,20 @@ body {
     padding: 10px 18px;
     border-radius: 8px;
     text-decoration: none;
+    animation: btn-primary 2s ease forwards;
 }
+
+@keyframes btn-primary {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .btn-outline {
     background: transparent;
@@ -180,6 +243,18 @@ body {
     color: white;
     padding: 10px 18px;
     border-radius: 8px;
+    animation: btn-outline 2s ease forwards;
+}
+
+@keyframes btn-outline {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 
@@ -197,6 +272,11 @@ body {
 .stats__container h3 {
     font-size: 30px;
     font-weight: bold;
+    transform: transform 0.3s;
+}
+
+.stats__container h3:hover {
+    transform: scale(1.05);
 }
 
 .stat-card {
@@ -207,9 +287,23 @@ body {
     border-radius: 8px;
     border: 2px solid rgba(30, 41, 59, 0.07);
     border: 2px solid rgb(192, 191, 191);
+    
+    animation: card 2s ease forwards;
 
 }
 
+
+
+@keyframes card {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .about {
     background: #f1f5f9;
@@ -228,11 +322,46 @@ body {
     border-radius: 16px;
     width: 50%;
     height: 420px;
+
+    animation-name: about-image;
+    animation-duration: 2s;      
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
+
+@keyframes about-image{
+    from {
+        transform: translateX(140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 .about-text {
     width: 50%;
+    
+    animation-name: about-text;
+    animation-duration: 2s;      
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
+
+@keyframes about-text{
+    from {
+        transform: translateX(-140px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
 
 .btn-link {
     background: none;
@@ -262,10 +391,33 @@ body {
   color: #137fec;
   padding: 12px 20px;
   border-radius: 8px;
+  
+    animation-name: btn-white;
+    animation-duration: 2s;      
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn-white{
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 
+.footer {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .container__footer {
+    margin: 0 auto;
+
   background: white;
   padding: 60px 0 20px;
   display: flex;
@@ -291,4 +443,69 @@ body {
   font-size: 12px;
   margin-top: 30px;
   color: #94a3b8;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+
+  
+  .nav__hamburguer {
+    display: block;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #137fec;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    
+   
+    transition:  0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 100;
+  }
+
+  
+  .nav.activate {
+    display: flex;
+    
+    opacity: 1;
+  }
+
+
+  .nav li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+
+@media screen and (max-width: 550px) {
+  .hero h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .about,
+  .cta-buttons {
+    flex-direction: column;
+  }
 }
